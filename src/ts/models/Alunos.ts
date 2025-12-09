@@ -21,6 +21,7 @@ export default function AlunosModel(sequelize: Sequelize): typeof Aluno {
     },
   }, {
     sequelize,
+    paranoid: true,
     tableName: "alunos",
     createdAt: "created_at",
     updatedAt: "updated_at",

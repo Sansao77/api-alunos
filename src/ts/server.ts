@@ -1,5 +1,5 @@
 import express from "express";
-import { router } from "./routes/alunosRoutes.router.ts";
+import { router } from "./routes/alunos.router.ts";
 
 const PORTA = 3000;
 

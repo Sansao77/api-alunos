@@ -1,11 +1,6 @@
 import type { Request, Response } from "express";
 import { Aluno } from "../models/index.ts";
 
-let alunos = [
-  { id: 1, nome: "Ana", curso: "DS" },
-  { id: 2, nome: "João", curso: "Redes" },
-];
-
 export async function listar(req: Request, res: Response) {
   try {
     const alunos = await Aluno.findAll();
@@ -49,11 +44,12 @@ export async function atualizar(req: Request, res: Response) {
   try {
     const id = Number(req.params.id);
     const { nome } = req.body;
-    const alunoAtualizado = await Aluno.findOne({ where: { id: id } });
+    const alunoAtualizado = await Aluno.findByPk(id);
 
     if (alunoAtualizado) {
-      alunoAtualizado.nome = nome;
-      await alunoAtualizado.save();
+      await alunoAtualizado.update({
+        nome,
+      });
     } else {
       return res.status(404).json({ error: "Aluno não encontrado" });
     }
