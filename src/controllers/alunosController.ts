@@ -1,7 +1,7 @@
 import type { Request, Response } from "express";
 import { Aluno } from "../models/index.ts";
 
-export async function listar(req: Request, res: Response) {
+export async function listar(_req: Request, res: Response) {
   try {
     const alunos = await Aluno.findAll();
 

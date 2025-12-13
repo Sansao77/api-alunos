@@ -1,4 +1,8 @@
 import express from "express";
+import swaggerUi from "swagger-ui-express";
+import swaggerJsdoc from "swagger-jsdoc";
+import type { Options } from "swagger-jsdoc";
+
 import routerAlunos from "./routes/alunos.router.ts";
 import routerCursos from "./routes/cursos.router.ts";
 import routerMatriculas from "./routes/matriculas.router.ts";
@@ -7,15 +11,42 @@ const PORTA = 3000;
 
 const app = express();
 
+const swaggerOptions: Options = {
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "API Alunos",
+      version: "1.0.0",
+      description: "API para gerenciamento de alunos e cursos",
+    },
+  },
+  apis: [
+    "./src/routes/**/*.router.ts",
+    "./src/controllers/**/*.ts",
+    "./src/models/**/*.ts",
+  ],
+};
+
+const swaggerDocs = swaggerJsdoc(swaggerOptions);
+
 app.use(express.json());
 app.use("/alunos", routerAlunos);
 app.use("/cursos", routerCursos);
 app.use("/matriculas", routerMatriculas);
+app.use(
+  "/api-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocs, {
+    explorer: true,
+    customCss: ".swagger-ui .topbar { display: none; }",
+    customSiteTitle: "API Alunos",
+  }),
+);
 
-app.get("/", (req, res) => {
+app.get("/", (_req, res) => {
   res.json(
     {
-      message: "API com Express está funcionando!",
+      message: "API Escola com Express está funcionando!",
     },
   );
 });
