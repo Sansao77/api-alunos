@@ -1,12 +1,16 @@
 import express from "express";
-import { router } from "./routes/alunos.router.ts";
+import routerAlunos from "./routes/alunos.router.ts";
+import routerCursos from "./routes/cursos.router.ts";
+import routerMatriculas from "./routes/matriculas.router.ts";
 
 const PORTA = 3000;
 
 const app = express();
 
 app.use(express.json());
-app.use("/alunos", router);
+app.use("/alunos", routerAlunos);
+app.use("/cursos", routerCursos);
+app.use("/matriculas", routerMatriculas);
 
 app.get("/", (req, res) => {
   res.json(

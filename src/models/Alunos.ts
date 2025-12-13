@@ -1,15 +1,16 @@
 import { DataTypes, Model, Sequelize } from "sequelize";
 
-class Curso extends Model {
+class Aluno extends Model {
   public id!: number;
   public nome!: string;
-  public descricao!: string;
+  public email!: string;
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
+  public readonly deletedAt!: Date;
 }
 
-export default function CursoModel(sequelize: Sequelize): typeof Curso {
-  Curso.init({
+export default function AlunosModel(sequelize: Sequelize): typeof Aluno {
+  Aluno.init({
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -19,16 +20,19 @@ export default function CursoModel(sequelize: Sequelize): typeof Curso {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    descricao: {
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
   }, {
     sequelize,
-    tableName: "cursos",
+    paranoid: true,
+    tableName: "alunos",
     createdAt: "created_at",
     updatedAt: "updated_at",
+    deletedAt: "deleted_at",
   });
 
-  return Curso;
+  return Aluno;
 }
