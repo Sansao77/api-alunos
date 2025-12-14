@@ -16,7 +16,16 @@ API Escolar para gerenciamento de alunos, cursos e matriculas. O sistema foi des
 
 ## Como Instalar?
 
-É possível instalar o projeto de duas formas:
+1. É possível instalar por [arquivo .zip](https://github.com/Sansao77/api-alunos/archive/refs/heads/main.zip)
+2. Ou, se tiver git instalado, utilize o seguinte comando no terminal:
+
+  ```bash
+  git clone https://github.com/Sansao77/api-alunos.git
+  ```
+  
+## Como Utilizar o projeto?
+
+É possível utilizar o projeto de duas formas:
 
 - Utilizando somente Docker e utilizando o docker-compose (mais simples)
 - Utilizando NodeJS e um banco de dados PostgreSQL
