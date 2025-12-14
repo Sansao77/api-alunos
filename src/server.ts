@@ -2,12 +2,17 @@ import express from "express";
 import swaggerUi from "swagger-ui-express";
 import swaggerJsdoc from "swagger-jsdoc";
 import type { Options } from "swagger-jsdoc";
+import * as dotenv from "dotenv";
+import * as process from "process";
+
+dotenv.config();
 
 import routerAlunos from "./routes/alunos.router.ts";
 import routerCursos from "./routes/cursos.router.ts";
 import routerMatriculas from "./routes/matriculas.router.ts";
+import * as init_db from "./init_db.ts";
 
-const PORTA = 3000;
+const PORTA = Number(process.env.API_PORT) || 3000;
 
 const app = express();
 
@@ -54,3 +59,5 @@ app.get("/", (_req, res) => {
 app.listen(PORTA, () => {
   console.log(`Servidor rodando em porta: http://localhost:${PORTA}`);
 });
+
+init_db.initDatabase();

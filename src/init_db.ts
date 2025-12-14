@@ -3,7 +3,7 @@ import * as path from "path";
 import { QueryTypes } from "sequelize";
 import sequelize from "./config/config.ts";
 
-async function initDatabase() {
+export async function initDatabase() {
   try {
     const escolaCreateScript = fs.readFileSync(
       path.join("./src/migrations/", "escola_create.sql"),
@@ -25,9 +25,5 @@ async function initDatabase() {
     console.log("Base de dados escola inicializada (dados teste adicionados)");
   } catch (err) {
     console.log("Erro ao iniciar o banco de dados: ", (err as Error).message);
-  } finally {
-    sequelize.close();
   }
 }
-
-initDatabase();
