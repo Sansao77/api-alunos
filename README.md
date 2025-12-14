@@ -8,14 +8,10 @@ API Escolar para gerenciamento de alunos, cursos e matriculas. O sistema foi des
 
 <div style="display: inline_block">
     <br>
-    <img align="center" alt="Typescript" height="100" width="50%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
-    <img align="center" alt="NodeJS" height="100" width="50%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
-</div>
-
-<div style="display: inline_block">
-    <br>
-    <img align="center" alt="Swagger UI" height="100" width="50%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original-wordmark.svg" />
-    <img align="center" alt="PostgreSQL" height="100" width="50%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
+    <img align="center" alt="Typescript" height="100" width="20%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+    <img align="center" alt="NodeJS" height="100" width="20%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+    <img align="center" alt="Swagger UI" height="100" width="20%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original-wordmark.svg" />
+    <img align="center" alt="PostgreSQL" height="100" width="20%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
 </div>
 
 ## Como Instalar?
