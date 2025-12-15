@@ -18,7 +18,7 @@ export async function buscarPorId(req: Request, res: Response) {
     const matriculaId = await Matricula.findByPk(id);
 
     if (!matriculaId) {
-      return res.status(404).json({ error: "Aluno não encontrado" });
+      return res.status(404).json({ error: "Matricula não encontrada" });
     }
 
     res.status(200).json(matriculaId);
@@ -47,9 +47,9 @@ export async function excluir(req: Request, res: Response) {
     const matricula = await Matricula.destroy({ where: { id: id } });
 
     if (matricula > 0) {
-      res.json({ mensagem: "Aluno removido com sucesso" });
+      res.json({ mensagem: "Matricula removida com sucesso" });
     } else {
-      return res.status(404).json({ error: "Aluno não encontrado" });
+      return res.status(404).json({ error: "Matricula não encontrada" });
     }
   } catch (err) {
     console.error("ERROR: " + (err as Error).message);

@@ -18,7 +18,7 @@ export async function buscarPorId(req: Request, res: Response) {
     const cursoId = await Curso.findByPk(id);
 
     if (!cursoId) {
-      return res.status(404).json({ error: "Aluno não encontrado" });
+      return res.status(404).json({ error: "Curso não encontrado" });
     }
 
     res.status(200).json(cursoId);
@@ -55,12 +55,12 @@ export async function atualizar(req: Request, res: Response) {
         modalidade: modalidade,
       });
     } else {
-      return res.status(404).json({ error: "Aluno não encontrado" });
+      return res.status(404).json({ error: "Curso não encontrado" });
     }
 
     res.status(200).json({
       CursoAtualizado,
-      mensagem: "Aluno atualizado com sucesso",
+      mensagem: "Curso atualizado com sucesso",
     });
   } catch (err) {
     console.error("ERROR: " + (err as Error).message);
@@ -73,9 +73,9 @@ export async function excluir(req: Request, res: Response) {
     const curso = await Curso.destroy({ where: { id: id } });
 
     if (curso > 0) {
-      res.json({ mensagem: "Aluno removido com sucesso" });
+      res.json({ mensagem: "Curso removido com sucesso" });
     } else {
-      return res.status(404).json({ error: "Aluno não encontrado" });
+      return res.status(404).json({ error: "Curso não encontrado" });
     }
   } catch (err) {
     console.error("ERROR: " + (err as Error).message);

@@ -58,6 +58,9 @@ app.get("/", (_req, res) => {
 
 app.listen(PORTA, () => {
   console.log(`Servidor rodando em porta: http://localhost:${PORTA}`);
+  console.log(
+    `Documentação e UI interativo disponível em porta: http://localhost:${PORTA}/api-docs`,
+  );
 });
 
 init_db.initDatabase();

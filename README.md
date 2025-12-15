@@ -53,7 +53,13 @@ A baixo vou explicar como utilizar ambos
 
   ```bash
   docker compose stop 
-  ``` 
+  ```
+  
+6. (Opcional) Caso deseje remover o projeto, siga o comando abaixo da mesma forma no passo 3:
+
+  ```bash
+  docker compose down --volumes --remove-orphans
+  ```
   
 ### Instalação com NodeJS e PostgreSQL
 
@@ -72,7 +78,7 @@ A baixo vou explicar como utilizar ambos
   -d postgres:15
   ```
 
-3. Após configurar o banco de dados PostgreSQL, crie um banco de dados escola (banco padrão) ou poder criar o banco com o nome e senha que achar adequado. Recomendo configurar os dados necessários para o projeto criando um arquivo .env (o arquivo .example.env defini as variaveis de ambientes já configuradas no projeto)
+3. Após configurar o banco de dados PostgreSQL, crie um schema de dados chamado escola (banco padrão) ou pode criar o banco com o nome e senha que achar adequado. É necessário configurar os dados definidos no banco, para o projeto criando um arquivo, .env (o arquivo .example.env defini as variaveis de ambientes já configuradas no projeto) no qual você defini as váriaveis de ambiente do projeto e configura como achar melhor.
 
 4. Entre dentro da pasta do projeto e rode o seguinte comando:
 
