@@ -32,7 +32,7 @@ export async function criar(req: Request, res: Response) {
     const { nome, cargahoraria, modalidade } = (req as Request).body;
     const novoCurso = await Curso.create({
       nome: nome,
-      cargahoraria: cargahoraria,
+      cargaHoraria: cargahoraria,
       modalidade: modalidade,
     });
 

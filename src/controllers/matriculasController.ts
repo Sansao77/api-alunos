@@ -31,8 +31,8 @@ export async function criar(req: Request, res: Response) {
   try {
     const { aluno_id, curso_id } = (req as Request).body;
     const novoMatricula = await Matricula.create({
-      aluno_id: aluno_id,
-      curso_id: curso_id,
+      alunoId: aluno_id,
+      cursoId: curso_id,
     });
 
     res.status(201).json(novoMatricula);

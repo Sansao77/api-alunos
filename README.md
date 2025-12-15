@@ -47,7 +47,7 @@ A baixo vou explicar como utilizar ambos
   docker compose up -d
   ``` 
 
-4. Apos isso o projeto estara funcional e rodando! Pode visualizar e testar a API na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+4. Apos isso o projeto estara funcional e rodando! Pode visualizar e testar a API, pelo Swagger UI, na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 5. (Opcional) Caso deseje parar o projeto, siga o comando abaixo da mesma forma no passo 3:
 
@@ -80,4 +80,30 @@ A baixo vou explicar como utilizar ambos
   npm i && node ./src/server.ts
   ```
 
-5. Apos isso o projeto estara funcional e rodando! Pode visualizar e testar a API na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+5. Apos isso o projeto estara funcional e rodando! Pode visualizar e testar a API, pelo Swagger UI, na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+
+## Exemplos da API com Swagger UI
+
+1. Criar aluno
+
+  ![aluno](./public/assets/criar-aluno.png)
+
+2. Criar curso
+
+  ![curso](./public/assets/criar-curso.png)
+
+3. Criar matricula
+
+  ![matricula](./public/assets/criar-matricula.png)
+
+4, Consultar alunos listados
+
+  ![alunos](./public/assets/consultar-alunos.png)
+
+5. Consultar cursos listados
+
+  ![cursos](./public/assets/consultar-cursos.png)
+
+6, Consultar matriculas listadas
+
+  ![matriculas](./public/assets/consultar-matriculas.png)
