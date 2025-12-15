@@ -42,8 +42,6 @@ app.use(
   "/api-docs",
   swaggerUi.serve,
   swaggerUi.setup(swaggerDocs, {
-    explorer: true,
-    customCss: ".swagger-ui .topbar { display: none; }",
     customSiteTitle: "API Alunos",
   }),
 );
