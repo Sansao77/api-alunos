@@ -2,9 +2,9 @@
 
 ## Descrição
 
-API Escolar para gerenciamento de alunos, cursos e matriculas. O sistema foi desenvolvido com Node + Typescript, ExpressJS, Sequelize e base de dados em PostgreSQL. Ele funciona por CLI (Command Line Interface), mas pode ser testado/utilizado por Swagger UI que está integrado no projeto.
+API Escolar para gerenciamento de alunos, cursos e matrículas. O sistema foi desenvolvido com Node + Typescript, ExpressJS, Sequelize e base de dados em PostgreSQL. Ele funciona por CLI (Command Line Interface), mas pode ser testado/utilizado por Swagger UI que está integrado no projeto.
   
-## Técnologias
+## Tecnologias
 
 <div style="display: inline_block">
     <br>
@@ -14,7 +14,7 @@ API Escolar para gerenciamento de alunos, cursos e matriculas. O sistema foi des
     <img align="center" alt="PostgreSQL" height="100" width="20%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" />
 </div>
 
-## Como Instalar?
+## Como instalar?
 
 1. É possível instalar por [arquivo .zip](https://github.com/Sansao77/api-alunos/archive/refs/heads/main.zip)
 2. Ou, se tiver git instalado, utilize o seguinte comando no terminal:
@@ -23,7 +23,7 @@ API Escolar para gerenciamento de alunos, cursos e matriculas. O sistema foi des
   git clone https://github.com/Sansao77/api-alunos.git
   ```
   
-## Como Utilizar o projeto?
+## Como utilizar o projeto?
 
 É possível utilizar o projeto de duas formas:
 
@@ -41,13 +41,13 @@ A baixo vou explicar como utilizar ambos
   docker --version
   ```
 
-3. Abra o terminal no diretorio do projeto (dentro da pasta api-alunos) e rode o seguinte comando:
+3. Abra o terminal no diretório do projeto (dentro da pasta api-alunos) e rode o seguinte comando:
 
   ```bash
   docker compose up -d
   ``` 
 
-4. Apos isso o projeto estara funcional e rodando! Pode visualizar e testar a API, pelo Swagger UI, na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+4. Apos isso o projeto estará funcional e rodando! Pode visualizar e testar a API, pelo Swagger UI, na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 5. (Opcional) Caso deseje parar o projeto, siga o comando abaixo da mesma forma no passo 3:
 
@@ -78,7 +78,7 @@ A baixo vou explicar como utilizar ambos
   -d postgres:15
   ```
 
-3. Após configurar o banco de dados PostgreSQL, crie um schema de dados chamado escola (banco padrão) ou pode criar o banco com o nome e senha que achar adequado. É necessário configurar os dados definidos no banco, para o projeto criando um arquivo, .env (o arquivo .example.env defini as variaveis de ambientes já configuradas no projeto) no qual você defini as váriaveis de ambiente do projeto e configura como achar melhor.
+3. Após configurar o banco de dados PostgreSQL, crie um schema de dados chamado escola (banco padrão) ou pode criar o schema com o nome e senha que achar adequado. É necessário configurar os dados definidos no banco, para o projeto criando um arquivo, .env (o arquivo .example.env é um exemplo para o .env) no qual você defini as variáveis de ambiente do projeto e configura como achar melhor.
 
 4. Entre dentro da pasta do projeto e rode o seguinte comando:
 
@@ -86,7 +86,7 @@ A baixo vou explicar como utilizar ambos
   npm i && node ./src/server.ts
   ```
 
-5. Apos isso o projeto estara funcional e rodando! Pode visualizar e testar a API, pelo Swagger UI, na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
+5. Após isso o projeto estará funcional e rodando! Pode visualizar e testar a API, pelo Swagger UI, na rota: [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 ## Exemplos da API com Swagger UI
 
@@ -98,11 +98,11 @@ A baixo vou explicar como utilizar ambos
 
   ![curso](./public/assets/criar-curso.png)
 
-3. Criar matricula
+3. Criar matrícula
 
-  ![matricula](./public/assets/criar-matricula.png)
+  ![matrícula](./public/assets/criar-matricula.png)
 
-4, Consultar alunos listados
+4. Consultar alunos listados
 
   ![alunos](./public/assets/consultar-alunos.png)
 
@@ -110,6 +110,6 @@ A baixo vou explicar como utilizar ambos
 
   ![cursos](./public/assets/consultar-cursos.png)
 
-6, Consultar matriculas listadas
+6. Consultar matrículas listadas
 
-  ![matriculas](./public/assets/consultar-matriculas.png)
+  ![matrículas](./public/assets/consultar-matriculas.png)
