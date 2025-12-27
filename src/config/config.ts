@@ -18,7 +18,7 @@ const sequelize = new Sequelize({
   username: username || "escola",
   password: password || "escola",
   database: database || "escola",
-  port: port || 3000,
+  port: port || 5432,
   retry: {
     match: [ConnectionRefusedError],
     max: 5,
