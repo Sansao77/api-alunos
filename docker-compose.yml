@@ -30,10 +30,10 @@ services:
       - escola-network
     environment:
       - DB_HOST=postgres
-      - DB_PORT=${DB_PORT}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
-      - DB_NAME=${DB_NAME}
+      - DB_PORT=${DB_PORT:-5432}
+      - DB_USER=${DB_USER:-escola}
+      - DB_PASSWORD=${DB_PASSWORD:-escola}
+      - DB_NAME=${DB_NAME:-escola}
     healthcheck:
       timeout: 5s
       retries: 3
