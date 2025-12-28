@@ -2,7 +2,6 @@ services:
   postgres:
     image: postgres:15
     container_name: escola-database
-    hostname: postgres
     environment:
       POSTGRES_USER: escola
       POSTGRES_PASSWORD: escola
