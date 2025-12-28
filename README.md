@@ -35,7 +35,7 @@ A baixo vou explicar como utilizar ambos
 ### Instalação com Docker
 
 1. É necessário ter Docker instalado em seu computador. Siga as instruções do site oficial: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
-2. Depois de instalar teste se está instalado corretamento utilizando o terminal (Linux/MacOS) ou PowerPoint:
+2. Depois de instalar teste se está instalado corretamento utilizando o terminal (Linux/MacOS) ou PowerShell:
 
   ```bash
   docker --version
